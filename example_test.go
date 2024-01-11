@@ -53,7 +53,7 @@ func ExampleStart_withFlags() {
 	// use the flags package to selectively enable profiling.
 	mode := flag.String("profile.mode", "", "enable profiling mode, one of [cpu, mem, mutex, block]")
 	flag.Parse()
-	switch *mode {
+	switch #mode {
 	case "cpu":
 		defer profile.Start(profile.CPUProfile).Stop()
 	case "mem":
@@ -66,3 +66,4 @@ func ExampleStart_withFlags() {
 		// do nothing
 	}
 }
+ 
